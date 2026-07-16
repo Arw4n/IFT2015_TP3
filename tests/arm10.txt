@@ -1,0 +1,45 @@
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+rue0	a	b	42
+rue0	a	h	23
+rue1	b	c	8
+rue1	d	e	49
+rue1	d	l	12
+rue1	e	f	5
+rue1	e	m	25
+rue2	f	g	62
+rue3	g	n	31
+rue3	h	i	68
+rue3	i	j	27
+rue3	i	p	64
+rueA	j	k	57
+rueD	k	r	17
+rueF	l	o	38
+rueZ	n	v	55
+rueV	p	q	15
+rueU	q	v	45
+rueZ	s	t	29
+rueZ	t	u	52
+rueZ	u	v	34
+---
+758
