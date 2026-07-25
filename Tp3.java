@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Collections;
 import java.util.PriorityQueue;
 
 
@@ -90,6 +91,7 @@ public class TP3 {
             // Algorithme de Kruskal
             ArrayList<Arete> ARM = Kruskal(noeuds, aretes);
             ARM.sort(Comparator.comparing(Arete::getA).thenComparing(Arete::getB));
+            Collections.sort(noeuds);
             int poidsTotal = 0;
 
             for(String i : noeuds) { // Affichage des noeuds
