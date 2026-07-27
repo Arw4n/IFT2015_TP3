@@ -1,3 +1,6 @@
+// Nom: Ryan Ramaherison Mac Way Kit - Matricule: 2030 6738
+// Nom : Arnaud Mehrabi - Matricule : 20302443
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
