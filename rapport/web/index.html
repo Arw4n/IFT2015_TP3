@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport IFT2015 - TP3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <p>Rapport IFT2015 - TP3</p>
+    </header>
+
+    <div class="team">
+        <u>Nom</u>:<strong> Ryan Ramaherison Mac Way Kit</strong> - <u>Matricule</u>: <strong>20306738</strong><br>
+        <u>Nom</u>:<strong> Arnaud Mehrabi</strong> - <u>Matricule</u>: <strong>20302443</strong><br>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>1. Auto-évaluation</h2>
+            <p>
+                Notre programme <code>Tp3.java</code> fonctionne: <span class="badge">Correctement</span>.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Analyse de la complexité temporelle</h2>
+            <p>
+                L'analyse asymptotique ci-dessous détaille l'analyse de la complexité temporelle du programme en fonction de:
+                <ul>
+                    <li>
+                        <span class="math">|V|</span> indique le nombre de sites (nœuds/sommets du graphe).
+                    </li>
+                    <li>
+                        <span class="math">|E|</span> indique le nombre de segments de rue (arêtes du graphe).
+                    </li>
+                </ul>
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th class="no-wrap">Etapes du Programme</th>
+                        <th>Complexité (Pire Cas)</th>
+                        <th>Justification Théorique</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Lecture du fichier & Initialisation</strong></td>
+                        <td><code>O(|V| + |E|)</code></td>
+                        <td>
+                            La lecture séquentielle du fichier d'entrée extrait <code>|V|</code> sommets et <code>|E|</code> arêtes. 
+                            Le découpage de chaque ligne et l'instanciation des objets <code>Arete</code> s'effectuent en temps constant <code>O(1)</code> par ligne, 
+                            pour une complexité temporelle de <code>O(|V| + |E|)</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Algorithme de Kruskal</strong></td>
+                        <td><code>O(|E| log(|E|))</code></td>
+                        <td>
+                            L'initialisation de la structure de données <code>disjointSet</code> prend <code>O(|V|)</code>. 
+                            L'insertion de toutes les arêtes dans la <code>PriorityQueue</code> prend <code>O(|E| log(|E|))</code>. 
+                            La boucle extrait les arêtes une à une via <code>poll()</code> en <code>O(log(|E|))</code> et effectue au plus <code>|E|</code> unions. 
+                            La complexité temporelle totale de l'algorithme de Kruskal est donc <code>O(|E| log(|E|))</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tri final des nœuds et de l'ARM</strong></td>
+                        <td><code>O(|V| log(|V|))</code></td>
+                        <td>
+                            Selon le format d'affichage exigé, la liste des sommets noeuds de taille <code>|V|</code> est triée en <code>O(|V| log(|V|))</code>. 
+                            L'ARM contient exactement <code>|V| - 1</code> arêtes, et son tri selon 
+                            les sommets de départ et d'arrivée s'exécute donc en <code>O(|V| log(|V|))</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Complexité totale du Programme</strong></td>
+                        <td><code>O(|V| log(|V|) + |E| log(|E|))</code></td>
+                        <td>
+                            En combinant la complexité temporelle de l'ensemble des étapes 
+                            (<code>O(|V| + |E|)</code> + 
+                            <code>O(|E| log(|E|))</code> + 
+                            <code>O(|V| log(|V|))</code>), 
+                            la complexité globale du programme dans le pire cas 
+                            est de <code>O(|V| log(|V|) + |E| log(|E|))</code>.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
